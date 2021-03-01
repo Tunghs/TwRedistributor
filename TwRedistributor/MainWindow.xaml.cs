@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using System.Windows.Input;
 
 namespace TwRedistributor
 {
@@ -10,6 +11,11 @@ namespace TwRedistributor
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

@@ -4,10 +4,47 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:local="clr-namespace:TwRedistributor"
+        xmlns:View="clr-namespace:TwRedistributor.View"
+        xmlns:ViewModel="clr-namespace:TwRedistributor.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Height="640" Width="1024" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" WindowStyle="None"
+        ShowTitleBar="False" ShowCloseButton="False" ShowMinButton="False"
+        AllowsTransparency="True" WindowState="{Binding MainWindowState, Mode=TwoWay}" 
+        Background="{x:Null}" BorderBrush="{x:Null}"
+        Title="MainWindow">
 
-    </Grid>
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border CornerRadius="10" Background="White" BorderBrush="Gray" BorderThickness="0.3">
+        <DockPanel Margin="5">
+            <StackPanel DockPanel.Dock="Top" Height="30" Background="White" VerticalAlignment="Center" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid Margin="2">
+                    <!-- Title -->
+                    <TextBlock Text="Talesweaver Redistribution Simulator" HorizontalAlignment="Left" TextAlignment="Center" VerticalAlignment="Center"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <!-- Minimize Button -->
+                        <Button Width="25" Height="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="White"
+                                Command="{Binding ButtonClickCommand}" CommandParameter="Minimize">
+                            <Image Width="10" Height="10" Source=".\Resources\Minimize.ico"/>
+                        </Button>
+                        
+                        <!-- Close Button -->
+                        <Button Width="25" Height="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="White"
+                                Command="{Binding ButtonClickCommand}" CommandParameter="Close">
+                            <Image Width="10" Height="10" Source=".\Resources\Close.ico"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            
+            <Grid DockPanel.Dock="Bottom" Background="White">
+                <View:MainView/>
+            </Grid>
+        </DockPanel>
+    </Border>
 </Mah:MetroWindow>
