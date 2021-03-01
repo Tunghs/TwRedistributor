@@ -113,8 +113,8 @@
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\RedistributorView.xaml.cs">
-      <DependentUpon>RedistributorView.xaml</DependentUpon>
+    <Compile Include="View\RedistributionView.xaml.cs">
+      <DependentUpon>RedistributionView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -140,7 +140,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\RedistributorView.xaml">
+    <Page Include="View\RedistributionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

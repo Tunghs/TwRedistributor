@@ -42,7 +42,7 @@
                 </Grid>
             </StackPanel>
             
-            <Grid DockPanel.Dock="Bottom" Background="White">
+            <Grid DockPanel.Dock="Bottom">
                 <View:MainView/>
             </Grid>
         </DockPanel>

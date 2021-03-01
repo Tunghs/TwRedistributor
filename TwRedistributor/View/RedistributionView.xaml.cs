@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TwRedistributor.View
 {
     /// <summary>
-    /// RedistributorView.xaml에 대한 상호 작용 논리
+    /// RedistributionView.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class RedistributorView : UserControl
+    public partial class RedistributionView : UserControl
     {
-        public RedistributorView()
+        public RedistributionView()
         {
             InitializeComponent();
         }
