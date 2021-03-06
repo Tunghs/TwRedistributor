@@ -63,6 +63,7 @@ namespace TwRedistributor.ViewModel
         }
 
         private void MinimizeWindow()
+
         {
             MainWindowState = WindowState.Minimized;
         }

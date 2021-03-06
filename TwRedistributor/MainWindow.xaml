@@ -19,32 +19,32 @@
         <ViewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border CornerRadius="10" Background="White" BorderBrush="Gray" BorderThickness="0.3">
-        <DockPanel Margin="5">
-            <StackPanel DockPanel.Dock="Top" Height="30" Background="White" VerticalAlignment="Center" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+    <Border CornerRadius="10" Background="LightGray" BorderBrush="LightGray" BorderThickness="0.3">
+        <DockPanel Margin="0">
+            <StackPanel DockPanel.Dock="Top" Height="30" Background="LightGray" VerticalAlignment="Center" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
                 <Grid Margin="2">
                     <!-- Title -->
                     <TextBlock Text="Talesweaver Redistribution Simulator" HorizontalAlignment="Left" TextAlignment="Center" VerticalAlignment="Center"/>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                         <!-- Minimize Button -->
-                        <Button Width="25" Height="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="White"
+                        <Button Style="{StaticResource TitleButtonStyle}"
                                 Command="{Binding ButtonClickCommand}" CommandParameter="Minimize">
                             <Image Width="10" Height="10" Source=".\Resources\Minimize.ico"/>
                         </Button>
-                        
+
                         <!-- Close Button -->
-                        <Button Width="25" Height="25" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="White"
+                        <Button Width="25" Height="25" BorderBrush="Transparent" Foreground="Transparent" Background="Transparent"
                                 Command="{Binding ButtonClickCommand}" CommandParameter="Close">
                             <Image Width="10" Height="10" Source=".\Resources\Close.ico"/>
                         </Button>
                     </StackPanel>
                 </Grid>
             </StackPanel>
-            
-            <Grid DockPanel.Dock="Bottom">
+
+            <Border DockPanel.Dock="Bottom" CornerRadius="10" Background="White" BorderBrush="White" BorderThickness="0.3">
                 <View:MainView/>
-            </Grid>
+            </Border>
         </DockPanel>
     </Border>
 </Mah:MetroWindow>

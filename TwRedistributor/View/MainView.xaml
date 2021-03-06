@@ -9,8 +9,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <DockPanel Background="White">
-        <Grid Width="230" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="White">
+    <DockPanel Background="White" Margin="5">
+        <Grid Width="230" DockPanel.Dock="Left" HorizontalAlignment="Left" Background="LightGray">
             <DockPanel>
                 <Image DockPanel.Dock="Top" Height="60" Margin="0 20 0 0"/>
 
